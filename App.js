@@ -1,6 +1,6 @@
 import { StatusBar } from "expo-status-bar";
 import { TextInput } from "react-native";
-import { StyleSheet, Text, View } from "react-native";
+import { StyleSheet, Text, View, Image, ImageBackground } from "react-native";
 
 export default function App() {
   const changeText = () => {
@@ -10,23 +10,12 @@ export default function App() {
   return (
     <View style={[styles.container, { backgroundColor: "#393961" }]}>
       <Text style={styles.text}>B O M - D I A! ! !</Text>
-      <TextInput
-        style={styles.input}
-        placeholder="Digite seu nome"
-        secureTextEntry={true}
-        placeholderTextColor={"white"}
-        inputMode={"numeric"}
-        autoCapitalize="characters"
-        multiline={true}
-        onChangeText={changeText}
+      <TextInput style={styles.input} />
+
+      <Image
+        source={require("./src/assets/img/heart.jpg")}
+        style={styles.image}
       />
-      {/*PLACEHOLDER: Coloca um texto informativo dentro do input*/}
-      {/*PLACEHOLDERTEXTCOLOR: Muda a cor do PLACEHOLDER*/}
-      {/*SECURETEXTENTRY: */}
-      {/*INPUTMODE: Coloca o tipo de texto que pode ser colocado no campo*/}
-      {/*AUTOCAPITALIZE: Deixa a primeira letra do input Maiúscula*/}
-      {/*MULTILINE: Ele deixa colocar mais linhas dentro do input*/}
-      {/*ONCHANGETEXT: Conta quantas vezes/caracteres o input foi utilizado*/}
     </View>
   );
 }
@@ -45,9 +34,15 @@ const styles = StyleSheet.create({
     width: 300,
     padding: 10,
 
-    color: "#465d85",
+    color: "#fff",
 
     borderBottomWidth: 1,
     borderBottomColor: "#9494d6",
+  },
+  image: {
+    width: 100,
+    height: 100,
+    bottom: -40,
+    borderRadius: 20,
   },
 });
