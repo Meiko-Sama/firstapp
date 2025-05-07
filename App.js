@@ -3,20 +3,22 @@ import { TextInput } from "react-native";
 import { StyleSheet, Text, View, Image, ImageBackground } from "react-native";
 
 export default function App() {
-  const changeText = () => {
-    console.log("Foi digitado algo no TEXT INPUT");
-  };
-
   return (
-    <View style={[styles.container, { backgroundColor: "#393961" }]}>
-      <Text style={styles.text}>B O M - D I A! ! !</Text>
-      <TextInput style={styles.input} />
+    <ImageBackground
+      style={styles.container}
+      source={require("./src/assets/img/background.jpg")}
+      resizeMode="cover"
+    >
+      <View>
+        <Text style={styles.text}>B O M - D I A! ! !</Text>
+        <TextInput style={styles.input} />
 
-      <Image
-        source={require("./src/assets/img/heart.jpg")}
-        style={styles.image}
-      />
-    </View>
+        <Image
+          source={require("./src/assets/img/heart.jpg")}
+          style={styles.image}
+        />
+      </View>
+    </ImageBackground>
   );
 }
 
@@ -46,3 +48,13 @@ const styles = StyleSheet.create({
     borderRadius: 20,
   },
 });
+
+// <View style={[styles.container, { backgroundColor: "#393961" }]}>
+//   <Text style={styles.text}>B O M - D I A! ! !</Text>
+//   <TextInput style={styles.input} />
+
+//   <Image
+//     source={require("./src/assets/img/heart.jpg")}
+//     style={styles.image}
+//   />
+// </View>
