@@ -48,6 +48,6 @@ const styles = StyleSheet.create({
     color: "#465d85",
 
     borderBottomWidth: 1,
-    borderBottomColor: "#9494d6",
+    borderBottomColor: "#223e6e",
   },
 });
